@@ -11,9 +11,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.foundation.layout.Row
-import androidx.compose.runtime.saveable.rememberSaveable
-
 
 
 @Composable
@@ -29,7 +26,7 @@ fun StatelessCounter(count: Int, onIncrement: () -> Unit, modifier: Modifier = M
 }
 
 @Composable
-fun StatefulCounter() {
+fun StatefulCounter(modifier: Modifier) {
     var waterCount by remember { mutableStateOf(0) }
     var juiceCount by remember { mutableStateOf(0) }
 
