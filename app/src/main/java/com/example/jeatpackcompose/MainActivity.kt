@@ -1,5 +1,6 @@
 package com.example.jeatpackcompose
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Surface
 import androidx.activity.ComponentActivity
@@ -27,6 +28,20 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    name = "DefaultPreviewLight"
+)
+@Composable
+fun ReplyAppPreview() {
+    JeatpackComposeTheme {
+        WellnessScreen()
     }
 }
 
